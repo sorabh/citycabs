@@ -1,0 +1,20 @@
+<h1>Ongoing Trips</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Trip Id</th>
+        <th>Cab Id</th>
+        <th>Start Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @trips.each do |trip| %>
+    <tr>
+        <td><%= trip.id %></td>
+        <td><%= trip.city.di %></td>
+        <td><%= trip.start_time %></td>
+    </tr>
+    <% end %>
+    </tbody>
+</table>
