@@ -1,0 +1,21 @@
+<h1>Available Cabs</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Cab Id</th>
+    <th>State</th>
+    <th>Cab City</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @cabs.each do |cab| %>
+      <tr>
+        <td><%= cab.id %></td>
+        <td><%= cab.state %></td>
+        <td><%= cab.city.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

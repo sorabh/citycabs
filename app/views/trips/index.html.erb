@@ -6,14 +6,16 @@
         <th>Trip Id</th>
         <th>Cab Id</th>
         <th>Start Time</th>
+        <th>End Trip<th>
     </tr>
     </thead>
     <tbody>
     <% @trips.each do |trip| %>
     <tr>
         <td><%= trip.id %></td>
-        <td><%= trip.city.di %></td>
+        <td><%= trip.cab.id %></td>
         <td><%= trip.start_time %></td>
+        <td><%= link_to "End the trip", "/trips/#{trip.id}/end", method: :put %></td>
     </tr>
     <% end %>
     </tbody>

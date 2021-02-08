@@ -1,0 +1,17 @@
+<h1>User Profile</h1>
+
+
+<h2>Email: <%= @user.email %></h2>
+<br/>
+
+<h2>Update the location</h2>
+
+<div>
+  <%= simple_form_for @user, url: profile_update_city_url do |f| %>
+    <%= f.input :city, selected: @user.city_id, collection: City.all.map { |city|  [ city.name, city.id ] }, include_blank: false %>
+    <footer>
+      <%= f.submit 'Update', class: 'btn btn-primary' %>
+      <%= link_to 'Cancel', cabs_path, class: 'btn btn-default' %>
+    </footer>
+  <%- end %>
+</div>
